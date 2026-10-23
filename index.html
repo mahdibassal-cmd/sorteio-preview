@@ -76,7 +76,7 @@ ol#w{list-style:none;padding:0;margin:22px 0 0;font-family:var(--serif);font-siz
   </div>
 </footer>
 <script>
-const RESULT_DATE='Resultado: segunda, 26/10'; // edite aqui a data do resultado
+const RESULT_DATE='Inscrições até domingo, 25/10, às 23:59. Resultado: segunda-feira, 26/10.'; // edite aqui a data do resultado
 const PRIZES=['Marwa','Fahad Regal','Bahiya Garnet'];
 let ppl=[],wins=0,won=new Set();const $=i=>document.getElementById(i);$('rd').textContent=RESULT_DATE;
 fetch('names.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{const m=new Map();d.forEach(x=>{const h=String(x.handle||'').trim().replace(/^@/,'').toLowerCase();const e=Math.max(1,x.entries|0);if(!h)return;m.set(h,(m.get(h)||0)+e)});ppl=[...m].map(([h,e])=>({h:'@'+h,e}));init()}).catch(init);
